@@ -16,7 +16,7 @@ waddingtonplot::waddingtonplot()
 add external images using 
 ```r
 waddingtonplot::waddingtonplot(c(1,2,4,8), do.return = T) +
-annotation_custom(grob = grid::rasterGrob(image = EBImage::readImage(files = "微信图片_20180217191752.jpg")),
+annotation_custom(grob = grid::rasterGrob(image = EBImage::readImage(files = "img_20180217191752.jpg")),
                     450, 550, 77, 85)
 ```
 <img src= "https://raw.githubusercontent.com/lizc07/myScripts/master/images/waddington.toy.png" width = 600>

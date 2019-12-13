@@ -1,0 +1,14 @@
+* installing *source* package 'waddingtonplot' ...
+** R
+** byte-compile and prepare package for lazy loading
+Warning: replacing previous import 'ggplot2::scale_discrete_manual' by 'ggridges::scale_discrete_manual' when loading 'waddingtonplot'
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+*** arch - i386
+Warning: replacing previous import 'ggplot2::scale_discrete_manual' by 'ggridges::scale_discrete_manual' when loading 'waddingtonplot'
+*** arch - x64
+Warning: replacing previous import 'ggplot2::scale_discrete_manual' by 'ggridges::scale_discrete_manual' when loading 'waddingtonplot'
+* DONE (waddingtonplot)
+In R CMD INSTALL

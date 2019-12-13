@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1576242215701.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4042804366",
+    "id" : "A120496B",
+    "lastKnownWriteTime" : 1576245316,
+    "last_content_update" : 1576245316299,
+    "path" : "D:/307Hospital/Github/zzwch/waddingtonplot/R/waddingtonPlot.R",
+    "project_path" : "R/waddingtonPlot.R",
+    "properties" : {
+        "cursorPosition" : "33,47",
+        "scrollLine" : "21"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

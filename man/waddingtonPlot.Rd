@@ -5,22 +5,29 @@
 \title{Plot Waddington Epigenetic Landscape using ggridges}
 \usage{
 waddingtonPlot(branches = c(1, 2, 4), horizontal_distribution = NULL,
-  vertical_distribution = NULL, bottom_width = 1000, top_width = 0.3
-  * bottom_width, ridge.height = 5, ridge.colors = c("red", "orange",
-  "yellow", "green", "blue", "cyan", "purple"), line.color = "black",
-  line.type = 1, line.size = 1, line.alpha = 0.2, theme.void = T,
-  hide.legend = T, do.return = F)
+  horizontal_distortion = NULL, vertical_distribution = NULL,
+  vertical_distortion = NULL, bottom_width = 2000, top_width = 0.3 *
+  bottom_width, ridge.count = 50, ridge.height = 5,
+  ridge.colors = c("red", "orange", "yellow", "green", "blue", "cyan",
+  "purple"), line.color = "black", line.type = 1, line.size = 1,
+  line.alpha = 0.2, theme.void = T, hide.legend = T, do.return = F)
 }
 \arguments{
 \item{branches}{a vector of integer numbers of steady states at each level of the hirarchy tree or developmental path, ordered from top to bottom.}
 
-\item{horizontal_distribution}{NULL or a list, whose length must be the same with vector `branches`, defining proportions in width of the states on the same level. (default: NULL)}
+\item{horizontal_distribution}{NULL or a list, whose length must be equal with that of vector `branches`, defining relative proportions of widths of the states at the same level. (default: NULL)}
 
-\item{vertical_distribution}{NULL or a vector, whose length must be 1 less than vector `branches`, defining vertical stretch between levels. (default: NULL)}
+\item{horizontal_distortion}{NULL or a list of integer vector of length 2, `horizontal_distribution` define proportion of states at the same level, while `horizontal_distortion` define asymmetric curves for each state. (default: NULL)}
+
+\item{vertical_distribution}{NULL or a integer vecotr, whose length must be 1 less than that of vector `branches`, defining vertical stretch between levels. (default: NULL)}
+
+\item{vertical_distortion}{NULL or a list of integer vector of length 2. `vertical_distribution` define distances between levlels, while `vertical_distortion` define asymmetric distortion for each betweeness. (default: NULL)}
 
 \item{bottom_width}{width of bottom of waddington plot}
 
 \item{top_width}{width of top of waddington plot}
+
+\item{ridge.count}{number of vertical ridge lines}
 
 \item{ridge.height}{height of ridge}
 

@@ -52,6 +52,7 @@ waddingtonPlot <- function(branches = c(1,2,4),
   }
   message('horizontal distribution is ready')
 
+  horizontal_distortion <- unlist(horizontal_distortion)
   if(is.null(horizontal_distortion)) {
     horizontal_distortion <- lapply(horizontal_distribution, function(b) {rep(b, each = 2)})
   }else if(length(horizontal_distortion) != 2*sum(branches)){
@@ -69,7 +70,7 @@ waddingtonPlot <- function(branches = c(1,2,4),
       distribution_level <- horizontal_distribution[[i]]
       distortion_level <- c()
       for(j in 1:length(distribution_level)) {
-        cosine_count <- cosine_count + j
+        cosine_count <- cosine_count + 1
         distortion_level <- c(distortion_level,
           cosine_left[cosine_count] * distribution_level[j],
           cosine_right[cosine_count] * distribution_level[j])
@@ -84,16 +85,16 @@ waddingtonPlot <- function(branches = c(1,2,4),
   ## vertical_distribution
   if(is.null(vertical_distribution)){
     vertical_distribution <- rep(1, times = length(branches) - 1)
-  }else if(is.vector(vertical_distribution) & length(vertical_distribution) == (length(branches) -1)) {
+  }else if(is.vector(vertical_distribution) & (length(vertical_distribution) == (length(branches) -1))) {
 
   }else {
-    stop("vertical_distribution must be list and its length must be length(branches)-1")
+    stop("vertical_distribution must be integer vector and its length must be length(branches)-1")
   }
-  vertical_distribution <- round(ridge.count * vertical_distribution/sum(vertical_distribution)/2)
+  vertical_distribution <- round(ridge.count * vertical_distribution/sum(vertical_distribution))
   message('vertical distribution is ready')
 
   if(is.null(vertical_distortion)) {
-    vertical_distortion <- lapply(vertical_distribution, function(b) {rep(b, each = 2)})
+    vertical_distortion <- lapply(vertical_distribution/2, function(b) {rep(b, each = 2)})
   }else if(length(unlist(vertical_distortion)) != 2*(length(branches) - 1)){
     stop("elements of vertical_distortion is not 1 less than levels included in branches")
   }else {

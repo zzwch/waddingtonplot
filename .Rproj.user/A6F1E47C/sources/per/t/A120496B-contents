@@ -36,7 +36,7 @@ waddingtonPlot <- function(branches = c(1,2,4),
                            ridge.count = 50,
                            ridge.height = 5,
                            ridge.colors = c("red","orange","yellow","green","blue","cyan","purple"),
-                           line.color = "black", line.type = 1, line.size = 1, line.alpha = 0.2,
+                           line.color = "black", line.type = 1, line.size = 0.1, line.alpha = 0.2,
                            theme.void = T, hide.legend = T, do.return = F){
   requireNamespace("ggridges")
   # check parameters

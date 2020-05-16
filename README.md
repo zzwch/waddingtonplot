@@ -8,14 +8,16 @@ Plot Waddington Epigenetic Landscape using ggridges, inspired by Figure 1 in [re
 
 # Install and try it
 ```r
-devtools::install_github("zzwch/waddingtonplot")
-waddingtonplot::waddingtonplot()
+remotes::install_github("zzwch/waddingtonplot")
+waddingtonplot::waddingtonPlot()
 ```
 
 # custom your graph 
 add external images using 
 ```r
-waddingtonplot::waddingtonplot(c(1,2,4,8), do.return = T) +
+require('ggplot2')
+require('EBImage') # install.packages('EBImage')
+waddingtonplot::waddingtonPlot(c(1,2,4,8), do.return = T) +
 annotation_custom(grob = grid::rasterGrob(image = EBImage::readImage(files = "img_20180217191752.jpg")),
                     450, 550, 77, 85)
 ```
